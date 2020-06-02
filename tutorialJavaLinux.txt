@@ -1,18 +1,35 @@
 # Instalação do Ambiente Java no Linux
 ## Instalando o Java
-https://www.oracle.com/java/technologies/javase-jdk14-downloads.html
-https://docs.oracle.com/en/java/javase/14/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8
+	https://www.oracle.com/java/technologies/javase-jdk14-downloads.html
+	https://docs.oracle.com/en/java/javase/14/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8
 
-$ sudo add-pat-repository ppa:linuxuprising/java
-$ sudo apt update
-$ sudo apt-get -f install oracle-java<version>-installer
-$ java --version
-	Será criado no diretório /usr/lib/jvm uma pasta denominada java-<version_installed>_oracle
-## Criar a variável de ambiente
-$ export JAVA_HOME="/usr/lib/jvm/java-<version_installed>_oracle"
-$ export PATH=$JAVA_HOME/bin:$PATH
+	$ sudo add-pat-repository ppa:linuxuprising/java
+	$ sudo apt update
+	$ sudo apt-get -f install oracle-java<version>-installer
+	$ java --version
+		Será criado no diretório /usr/lib/jvm uma pasta denominada java-<version_installed>_oracle
+	## Criar a variável de ambiente
+	$ export JAVA_HOME="/usr/lib/jvm/java-<version_installed>_oracle"
+	$ export PATH=$JAVA_HOME/bin:$PATH
 
 #Ferramentas de Build
-## Gradle
+	## Gradle
+		https://www.gradle.org
+	$sudo mkdir /opt/gradle
+	$sudo unzip -d /opt/gradle gradle-6.4.1-bin.zip
+	$export PATH=$PATH:/opt/gradle/gradle-6.4.1/bin
+	$sudo apt purge gradle //old versions
+	$gradle -v
 
-## Mave
+	## Mave
+		https://maven.apache.org
+	$sudo mkdir /opt/mave
+	$sudo unzip -d  /opt/maven apache-maven-3.6.3-bin.zip
+	$export PATH=$PATH:/opt/maven/apache-maven-3.6.3/bin
+	$mvn -v
+
+#IDE de Desenvolvimento
+## IntelJ
+	https://www.jetbrains.com/idea/download/#section=linux
+	Versão community = Free
+	
