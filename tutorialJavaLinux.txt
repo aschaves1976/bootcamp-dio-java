@@ -1,5 +1,7 @@
 # Instalação do Ambiente Java no Linux
 ## Instalando o Java
+https://www.oracle.com/java/technologies/javase-jdk14-downloads.html
+https://docs.oracle.com/en/java/javase/14/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8
 
 $ sudo add-pat-repository ppa:linuxuprising/java
 $ sudo apt update
