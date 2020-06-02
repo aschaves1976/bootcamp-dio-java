@@ -1,0 +1,16 @@
+# Instalação do Ambiente Java no Linux
+## Instalando o Java
+
+$ sudo add-pat-repository ppa:linuxuprising/java
+$ sudo apt update
+$ sudo apt-get -f install oracle-java<version>-installer
+$ java --version
+	Será criado no diretório /usr/lib/jvm uma pasta denominada java-<version_installed>_oracle
+## Criar a variável de ambiente
+$ export JAVA_HOME="/usr/lib/jvm/java-<version_installed>_oracle"
+$ export PATH=$JAVA_HOME/bin:$PATH
+
+#Ferramentas de Build
+## Gradle
+
+## Mave
