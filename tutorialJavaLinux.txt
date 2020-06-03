@@ -13,23 +13,32 @@
 	$ export PATH=$JAVA_HOME/bin:$PATH
 
 #Ferramentas de Build
-	## Gradle
+	## Gradle - mais moderno
 		https://www.gradle.org
-	$sudo mkdir /opt/gradle
-	$sudo unzip -d /opt/gradle gradle-6.4.1-bin.zip
-	$export PATH=$PATH:/opt/gradle/gradle-6.4.1/bin
-	$sudo apt purge gradle //old versions
-	$gradle -v
-
-	## Mave
+	$ sudo mkdir /opt/gradle
+	$ sudo unzip -d /opt/gradle gradle-6.4.1-bin.zip
+	$ export PATH=$PATH:/opt/gradle/gradle-6.4.1/bin
+	$ sudo apt purge gradle //old versions
+	$ gradle -v
+	$ gradle wrapper - gerar um arquivo de controle de versões da ferramenta garantindo que todos os desenvolvedores estejam utilizando a mesma versão da ferramenta no projeto
+		Após sua execução serão criados:
+			uma pasta chamada gradle;
+			um binário chamdo gradlew;
+			um binário chamado gradlew.bat;
+		Agora para utilizar a ferramenta de build será utilizada a ferramenta que está instalada localmente dentro do projeto, utilizando o ./gradlew -v
+		
+	## Mave - mais antigo baseado em XML, legado do ANT
 		https://maven.apache.org
-	$sudo mkdir /opt/mave
-	$sudo unzip -d  /opt/maven apache-maven-3.6.3-bin.zip
-	$export PATH=$PATH:/opt/maven/apache-maven-3.6.3/bin
-	$mvn -v
-
+	$ sudo mkdir /opt/mave
+	$ sudo unzip -d  /opt/maven apache-maven-3.6.3-bin.zip
+	$ export PATH=$PATH:/opt/maven/apache-maven-3.6.3/bin
+	$ mvn -v
+	$ mvn -N io.takari:maven:wrapper
+	$ ./mvn -v
 #IDE de Desenvolvimento
 ## IntelJ
 	https://www.jetbrains.com/idea/download/#section=linux
 	Versão community = Free
-	
+	$ sudo tar -xzf ideaIC-2020.1.1.tar.gz
+	$ cd idea-IC-201.7223.91/bin
+	$ ./idea.sh -> executar este comando para iniciar a IDE
